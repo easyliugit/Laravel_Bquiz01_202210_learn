@@ -5,5 +5,7 @@
 - [從零開始學Laravel 系列Github](https://github.com/mackliu/laravel-bquiz01.git)
 
 # 學習紀錄
-- 採用網頁設計乙級題組一作為範例來講解Laravel的操作
-- 我改用Laravel 9 學習
+- 2022/10/5
+- 美克叔叔採用網頁設計乙級題組一作為範例來講解Laravel的操作
+- 改用Laravel 9 學習
+- 安裝Laravel 需耐心等待，避免安裝不完全。

@@ -1,9 +1,11 @@
 @extends('layouts.layout')
 
 @section('main')
-    主要資訊
+    <div class="menu"></div>
+    <div class="main"></div>
+    <div class="right"></div>
 @endsection
 
 @section('script')
-    寫js
+    
 @endsection

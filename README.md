@@ -9,6 +9,9 @@
 # 學習紀錄
 - 2022/10/6
 - 使用Bootstrap 完成版型配置
+- 乙級題型一後台沒有首頁，重新調整路由路徑
+- 進階用法，連結同版面，在路由設定變數ex:http://localhost/admin/{name}，暫不使用Contrller方式
+- 
 - 2022/10/5
 - Laravel 前端模板Blade
 - 使用- Laravel 方便結合Vue.js 使用，提供在起始加上"@"可忽略原{{ }}"用法ex:@{{ $values }}

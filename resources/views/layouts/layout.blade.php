@@ -11,11 +11,15 @@
 </head>
 <body>
     <div class="container">
-        <div class="header"></div>
-        <div class="main">
+        <div class="header">
+            <img src="{{ asset('img/01B01.jpg') }}" alt="" class="w-100">
+        </div>
+        <div class="main d-flex" style="height: 568px">
             @yield('main')
         </div>
-        <div class="footer"></div>
+        <div class="footer w-100">
+            <div class="text-center" style="height: 100px;line-height: 100px;background:yellow">頁尾版權</div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

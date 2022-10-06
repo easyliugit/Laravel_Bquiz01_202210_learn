@@ -10,6 +10,7 @@
 - 2022/10/5
 - Laravel 前端模板Blade
 - 使用- Laravel 方便結合Vue.js 使用，提供在起始加上"@"可忽略原{{ }}"用法ex:@{{ $values }}
+- 使用asset()相對路徑找到css外部檔案
 - css 使用外部引入時，檔案須放置於public目錄下，並將路徑使用"{{ asset('css/style.css') }}"方法寫入，此方法Laravel 會使用相對路徑找到外部檔案
 - 
 - 2022/10/4

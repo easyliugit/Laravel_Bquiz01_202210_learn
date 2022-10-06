@@ -12,6 +12,7 @@
 - 乙級題型一後台沒有首頁，重新調整路由路徑
 - 進階用法，連結同版面，在路由設定變數ex:http://localhost/admin/{name}，暫不使用Contrller方式
 - 選單改用引入@include方式
+- 使用Bootstrap 完成主要內容區域
 - 
 - 2022/10/5
 - Laravel 前端模板Blade，

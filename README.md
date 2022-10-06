@@ -7,6 +7,8 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+- 2022/10/6
+- 使用Bootstrap 完成版型配置
 - 2022/10/5
 - Laravel 前端模板Blade
 - 使用- Laravel 方便結合Vue.js 使用，提供在起始加上"@"可忽略原{{ }}"用法ex:@{{ $values }}

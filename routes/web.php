@@ -15,17 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
 Route::view('/home', 'home');
-Route::view('/admin', 'backend.module',['header'=>'網站標題管理']);
+Route::view('/admin', 'backend.module',['header'=>'網站標題管理','module'=>'Title']);
 Route::get('/admin/{module}', function($module){
     switch ($module) {
         case 'title':
-            return view('backend.module',['header'=>'網站標題管理']);
+            return view('backend.module',['header'=>'網站標題管理','module'=>'Title']);
             break;
         case 'ad':
-            return view('backend.module',['header'=>'動態文字廣告管理']);
+            return view('backend.module',['header'=>'動態文字廣告管理','module'=>'Ad']);
             break;
         case 'image':
-            return view('backend.module',['header'=>'校園映像圖片管理']);
+            return view('backend.module',['header'=>'校園映像圖片管理','module'=>'Image']);
             break;
         case 'mvim':
             return view('backend.module',['header'=>'動畫圖片管理']);
@@ -53,7 +53,9 @@ Route::get('/admin/{module}', function($module){
 });
 
 //modals
-Route::view("/modals/addTitle",'modals.base_modal');
+Route::view("/modals/addTitle",'modals.base_modal',['modal_header'=>'新增網站標題']);
+Route::view("/modals/addAd",'modals.base_modal',['modal_header'=>'新增動態文字廣告']);
+Route::view("/modals/addImage",'modals.base_modal',['modal_header'=>'新增校園映像圖片']);
 
 
 // 群組

@@ -11,6 +11,8 @@
 - 使用Bootstrap Modal 載入新增視窗
 - Bootstrap 5 Javascript 改用物件導向方式呼叫Modal
 - Modal 隱藏時，清除資源、刪除內容
+- 在路由直接帶參數，完成不同資料帶入同一頁面
+- 後台初步切版告一段落
 - 
 - 2022/10/6
 - 使用Bootstrap 完成版型配置

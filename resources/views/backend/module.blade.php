@@ -35,7 +35,7 @@
 @section('script')
 <script>
     $('#addRow').on('click', function () {
-        $.get("/modals/addTitle", function (modal) {
+        $.get("/modals/add{{ $module }}", function (modal) {
             $("#modal").html(modal)
             const myModal = new bootstrap.Modal('#baseleModal')
             myModal.show()

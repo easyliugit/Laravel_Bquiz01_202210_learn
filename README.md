@@ -10,6 +10,8 @@
 - 2022/10/7
 - 使用Bootstrap Modal 載入新增視窗
 - Bootstrap 5 Javascript 改用物件導向方式呼叫Modal
+- Modal 隱藏時，清除資源、刪除內容
+- 
 - 2022/10/6
 - 使用Bootstrap 完成版型配置
 - 乙級題型一後台沒有首頁，重新調整路由路徑

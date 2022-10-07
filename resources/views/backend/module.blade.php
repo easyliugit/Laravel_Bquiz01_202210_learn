@@ -39,6 +39,11 @@
             $("#modal").html(modal)
             const myModal = new bootstrap.Modal('#baseleModal')
             myModal.show()
+            // 隱藏時 清除資源 刪除內容
+            $('#baseleModal').on('hidden.bs.modal',function(){
+                myModal.dispose()
+                $("#modal").html("")
+            })
         })
     })
 </script>

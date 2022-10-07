@@ -7,10 +7,13 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+- 2022/10/7
+- 使用Bootstrap Modal 載入新增視窗
+- Bootstrap 5 Javascript 改用物件導向方式呼叫Modal
 - 2022/10/6
 - 使用Bootstrap 完成版型配置
 - 乙級題型一後台沒有首頁，重新調整路由路徑
-- 進階用法，連結同版面，在路由設定變數ex:http://localhost/admin/{name}，暫不使用Contrller方式
+- 進階用法，連結同版面，在路由設定變數ex:localhost/admin/{name}，暫不使用Contrller方式
 - 選單改用引入@include方式
 - 使用Bootstrap 完成主要內容區域
 - 
@@ -24,6 +27,6 @@
 - 2022/10/4
 - 美克叔叔採用網頁設計乙級題組一作為範例來講解Laravel 的操作
 - 美克叔叔盡量用Laravel 4~8 都有的方法教學
-- 個人改用Laravel 9 學習
+- 個人改用Laravel 9 +Bootstrap 5 學習
 - 安裝Laravel 需耐心等待，避免安裝不完全
 - 

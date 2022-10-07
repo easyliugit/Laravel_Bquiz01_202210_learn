@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
 Route::view('/home', 'home');
+Route::view('/admin', 'backend.module',['header'=>'網站標題管理']);
 Route::get('/admin/{module}', function($module){
     switch ($module) {
         case 'title':
@@ -46,10 +47,13 @@ Route::get('/admin/{module}', function($module){
             break;
         
         default:
-            # code...
+            return view('backend.module',['header'=>'網站標題管理']);
             break;
     }
 });
+
+//modals
+Route::view("/modals/addTitle",'modals.base_modal');
 
 
 // 群組

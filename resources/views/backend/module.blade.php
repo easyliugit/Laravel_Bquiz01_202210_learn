@@ -9,7 +9,7 @@
         <button class="col-4 btn btn-light border py-2 text-center">管理登出</button>
         <div class="border w-100 p-1" style="height: 500px">
             <h5 class="text-center border-bottom py-3">
-                <button class="btn btn-primary btn-sm float-start">新增</button>
+                <button id="addRow" class="btn btn-primary btn-sm float-start">新增</button>
                 {{ $header }}
             </h5>
             <table class="table border-none text-center">
@@ -33,5 +33,13 @@
 @endsection
 
 @section('script')
-    
+<script>
+    $('#addRow').on('click', function () {
+        $.get("/modals/addTitle", function (modal) {
+            $("#modal").html(modal)
+            const myModal = new bootstrap.Modal('#baseleModal')
+            myModal.show()
+        })
+    })
+</script>
 @endsection

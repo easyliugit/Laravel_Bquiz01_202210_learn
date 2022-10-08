@@ -19,6 +19,7 @@
 - 在某些書的作者想在8 之後的版本依舊使用7 以前方法，需要到RouteServiceProvider.php做修改
 - 使用Route Groups Prefixes 建立admin 導向路徑
 - 完成在路由連結控制器
+- 介紹Resource Controllers 預設方法
 - 
 - 2022/10/7
 - 使用Bootstrap Modal 載入新增視窗

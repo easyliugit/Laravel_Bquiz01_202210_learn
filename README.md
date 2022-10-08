@@ -8,13 +8,17 @@
 
 # 學習紀錄
 - 2022/10/8
-- Laravel Contrller 介紹
+- Laravel Controller 介紹
 - 請求=>路由=>視圖=>回應
 - 請求=>路由=>控制器=>視圖=>回應
 - 請求=>路由=>控制器=>模型=>資料庫=>模型=>控制器=>視圖=>回應
 - 建議初學者，一個功能，對應一個資料表，對應一個控制器
 - 路由使用redirect方法將/admin直接導向/admin/tiltle
 - 路由中變數越多(不確定性)，排列越下面
+- 開始使用Controller 說明7 與8 不同的使用方式
+- 在某些書的作者想在8 之後的版本依舊使用7 以前方法，需要到RouteServiceProvider.php做修改
+- 使用Route Groups Prefixes 建立admin 導向路徑
+- 完成在路由連結控制器
 - 
 - 2022/10/7
 - 使用Bootstrap Modal 載入新增視窗

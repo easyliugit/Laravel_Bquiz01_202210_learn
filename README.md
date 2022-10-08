@@ -7,9 +7,18 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+- 2022/10/8
+- Laravel Contrller 介紹
+- 請求=>路由=>視圖=>回應
+- 請求=>路由=>控制器=>視圖=>回應
+- 請求=>路由=>控制器=>模型=>資料庫=>模型=>控制器=>視圖=>回應
+- 建議初學者，一個功能，對應一個資料表，對應一個控制器
+- 路由使用redirect方法將/admin直接導向/admin/tiltle
+- 路由中變數越多(不確定性)，排列越下面
+- 
 - 2022/10/7
 - 使用Bootstrap Modal 載入新增視窗
-- Bootstrap 5 Javascript 改用物件導向方式呼叫Modal
+- Bootstrap 5 Javascript 需要建立新物件方式呼叫Modal
 - Modal 隱藏時，清除資源、刪除內容
 - 在路由直接帶參數，完成不同資料帶入同一頁面
 - 後台初步切版告一段落

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
 Route::view('/home', 'home');
-Route::view('/admin', 'backend.module',['header'=>'網站標題管理','module'=>'Title']);
+Route::redirect('/admin', '/admin/title');
 Route::get('/admin/{module}', function($module){
     switch ($module) {
         case 'title':

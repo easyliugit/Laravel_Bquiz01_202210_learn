@@ -10,6 +10,9 @@
 - 2022/10/9
 - 使用Controllers 完成之前在路由的進階用法，連結同版面
 - 不使用Resource 建立所有的Controllers
+- 建立資料庫，製作查詢功能
+- make:model 建立新資料表，make:migration 調整新資料表
+- make:model 加上-m，同時在migration 加上紀錄
 - 
 - 2022/10/8
 - Laravel Controller 介紹

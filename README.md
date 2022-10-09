@@ -9,6 +9,7 @@
 # 學習紀錄
 - 2022/10/9
 - 使用Controllers 完成之前在路由的進階用法，連結同版面
+- 不使用Resource 建立所有的Controllers
 - 
 - 2022/10/8
 - Laravel Controller 介紹

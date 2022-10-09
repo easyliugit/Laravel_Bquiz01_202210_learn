@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('titles', function (Blueprint $table) {
             $table->id();
+            $table->string('text',64)->nullable();
+            $table->string('img',100)->nullable();
+            $table->boolean('sh')->default(0);
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();
         });
     }

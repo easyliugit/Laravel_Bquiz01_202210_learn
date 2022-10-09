@@ -13,6 +13,28 @@
 - 建立資料庫，製作查詢功能
 - make:model 建立新資料表，make:migration 調整新資料表
 - make:model 加上-m，同時在migration 加上紀錄
+- migration 設定資料表型態，up 建立，down 還原
+- 先至.env 設定資料庫名稱，與到資料庫建立此名稱
+- php artisan migrate 正式依照migration 設定資料表
+- php artisan migrate:rollback 回覆上一個migrations資料表中記錄的動作(當前一步做錯時可使用)
+- 塞假資料，php artisan tinker 進入Shell 狀態執行特殊指令
+- 以下照打，目的是建立資料表內容
+- Title::count()
+- $title=new Title
+- $title->text="科技大學校園資訊系統"
+- $title->img="01B01.jpg"
+- $title->sh=1
+- $title->save() ,如果回傳true 表示建立成功,若是其他則修正上述內容重新輸入
+- $all=Title::all()
+- Title::count()
+- 以下照打，目的是刪除資料表內容
+- Title::find(1)
+- $title=Title::find(1)
+- $title->delete() ,如果回傳true 表示刪除成功(不建議使用)
+- $title->softdelete() ,如果回傳true 表示軟刪除成功
+- $all=Title::all()
+- Title::count()
+- 輸入quit 離開Shell 狀態
 - 
 - 2022/10/8
 - Laravel Controller 介紹

@@ -7,6 +7,9 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+- 2022/10/9
+- 使用Controllers 完成之前在路由的進階用法，連結同版面
+- 
 - 2022/10/8
 - Laravel Controller 介紹
 - 請求=>路由=>視圖=>回應

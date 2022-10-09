@@ -13,7 +13,7 @@ class TitleController extends Controller
      */
     public function index()
     {
-        //
+        return view('backend.module',['header'=>'網站標題管理','module'=>'Title']);
     }
 
     /**

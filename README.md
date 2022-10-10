@@ -7,6 +7,10 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+- 2022/10/10
+- 在Controller 導入Model，取得資料表資料，使用dd()偵錯
+- 修改前端版面，顯示資料表資料
+- 
 - 2022/10/9
 - 使用Controllers 完成之前在路由的進階用法，連結同版面
 - 不使用Resource 建立所有的Controllers
@@ -37,7 +41,6 @@
 - 輸入quit 離開Shell 狀態
 - 
 - 到Model/Title 設定資料表存取權
-- 在Controller 導入Model，使用dd()偵錯
 - 
 - 2022/10/8
 - Laravel Controller 介紹

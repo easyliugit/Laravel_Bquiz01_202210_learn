@@ -15,7 +15,7 @@ class TitleController extends Controller
     public function index()
     {
         $all = Title::all();
-        dd($all);
+        // dd($all);
         return view('backend.module',['header'=>'網站標題管理','module'=>'Title','rows'=>$all]);
     }
 

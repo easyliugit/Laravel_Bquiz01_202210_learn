@@ -35,7 +35,9 @@
 - $all=Title::all()
 - Title::count()
 - 輸入quit 離開Shell 狀態
-- 到Model/Title 設定資料表存取權 
+- 
+- 到Model/Title 設定資料表存取權
+- 在Controller 導入Model，使用dd()偵錯
 - 
 - 2022/10/8
 - Laravel Controller 介紹

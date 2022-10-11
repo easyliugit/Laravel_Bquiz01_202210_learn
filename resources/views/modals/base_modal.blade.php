@@ -14,14 +14,25 @@ Launch demo modal
     </div>
     <div class="modal-body">
         <table class="m-auto">
-            <tr>
-                <td>標題區圖片</td>
-                <td>@include('layouts.input',['type'=>'file','name'=>'img'])</td>
-            </tr>
-            <tr>
-                <td>標題區替代文字</td>
-                <td><input type="text" name="text" id=""></td>
-            </tr>
+            @isset($modal_body)
+            @foreach ($modal_body as $row)
+                <tr>
+                    <td class="text-right">{{$row["label"]}}</td>
+                    <td>
+                        @switch($row["tag"])
+                            @case('input')
+                                @include('layouts.input',$row)
+                                @break
+                            @case('textarea')
+                                
+                                @break
+                            @default
+                                
+                        @endswitch
+                    </td>
+                </tr>
+            @endforeach
+            @endisset
         </table>
     </div>
     <div class="modal-footer">

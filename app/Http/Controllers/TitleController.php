@@ -27,8 +27,25 @@ class TitleController extends Controller
     public function create()
     {
         //
+        $view=[
+            'modal_header'=>'新增網站標題',
+            'modal_body'=>[
+                [
+                    'label'=>'標題圖片',
+                    'tag'=>'input',
+                    'type'=>'file',
+                    'name'=>'img'
+                ],
+                [
+                    'label'=>'標題區替代文字',
+                    'tag'=>'input',
+                    'type'=>'text',
+                    'name'=>'text'
+                ],
+            ],
+        ];
 
-        return view('modals.base_modal',['modal_header'=>'新增網站標題']);
+        return view('modals.base_modal',$view);
     }
 
     /**

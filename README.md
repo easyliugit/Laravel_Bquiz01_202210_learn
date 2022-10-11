@@ -13,7 +13,7 @@
 - 發現軟刪除用法錯誤，刪除資料表，至migration 設定軟刪除資料表型態
 - 至Model 導入軟刪除softDeletes
 - 使用tinker 塞假資料，測試軟刪除，softDeletes_at 會記錄刪除時間
-- 
+- 設置互動視窗內顯示的欄位類型
 - 
 - 2022/10/9
 - 使用Controllers 完成之前在路由的進階用法，連結同版面

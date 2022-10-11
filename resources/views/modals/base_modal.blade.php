@@ -5,7 +5,7 @@ Launch demo modal
 
 <!-- Modal -->
 <div class="modal fade" id="baseleModal" tabindex="-1" aria-labelledby="ModalCenter" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
+<div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
     <div class="modal-header">
         {{-- 網站標題 --}}
@@ -13,7 +13,16 @@ Launch demo modal
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        ...
+        <table class="m-auto">
+            <tr>
+                <td>標題區圖片</td>
+                <td>@include('layouts.input',['type'=>'file','name'=>'img'])</td>
+            </tr>
+            <tr>
+                <td>標題區替代文字</td>
+                <td><input type="text" name="text" id=""></td>
+            </tr>
+        </table>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>

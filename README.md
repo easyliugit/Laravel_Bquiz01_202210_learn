@@ -7,6 +7,12 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+## 2022/10/11
+- 介紹Laravel 儲存檔案機制
+- storage:link 建立共用連結
+- public/storage <-> storage/app/public
+- 完成檔案上傳，新增資料功能
+- 
 ## 2022/10/10
 - 在Controller 導入Model，取得資料表資料，使用dd()偵錯
 - 修改前端版面，顯示資料表資料

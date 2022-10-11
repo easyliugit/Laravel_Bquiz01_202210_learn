@@ -12,6 +12,7 @@
 - storage:link 建立共用連結
 - public/storage <-> storage/app/public
 - 完成檔案上傳，新增資料功能
+- 修改檔案路徑img->storage
 - 
 ## 2022/10/10
 - 在Controller 導入Model，取得資料表資料，使用dd()偵錯

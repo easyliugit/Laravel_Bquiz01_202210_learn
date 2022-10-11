@@ -7,6 +7,7 @@ Launch demo modal
 <div class="modal fade" id="baseleModal" tabindex="-1" aria-labelledby="ModalCenter" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered modal-xl">
     <form action="{{$action}}" method="post" enctype="multipart/form-data" class="w-100">
+    @csrf
         <div class="modal-content">
         <div class="modal-header">
             {{-- 網站標題 --}}

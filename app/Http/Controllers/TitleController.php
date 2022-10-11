@@ -58,6 +58,7 @@ class TitleController extends Controller
     public function store(Request $request)
     {
         //
+        return '儲存新資料';
     }
 
     /**

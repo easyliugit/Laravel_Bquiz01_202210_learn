@@ -26,6 +26,7 @@ Route::view('/', 'home');
 Route::view('/home', 'home');
 Route::redirect('/admin', '/admin/title'); 
 Route::prefix('/admin')->group(function(){
+    // get
     Route::get('/title', [TitleController::class,'index']);
     Route::get('/ad', [AdController::class,'index']);
     Route::get('/image', [ImageController::class,'index']);
@@ -35,6 +36,14 @@ Route::prefix('/admin')->group(function(){
     Route::get('/news', [NewsController::class,'index']);
     Route::get('/admin', [AdminController::class,'index']);
     Route::get('/menu', [MenuController::class,'index']);
+    // post
+    Route::post('/title', [TitleController::class,'store']);
+    Route::post('/ad', [AdController::class,'store']);
+    Route::post('/image', [ImageController::class,'store']);
+    Route::post('/mvim', [MvimController::class,'store']);
+    Route::post('/news', [NewsController::class,'store']);
+    Route::post('/admin', [AdminController::class,'store']);
+    Route::post('/menu', [MenuController::class,'store']);
 });
 
 //modals

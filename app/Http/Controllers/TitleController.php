@@ -28,6 +28,7 @@ class TitleController extends Controller
     {
         //
         $view=[
+            'action'=>'/admin/title',
             'modal_header'=>'新增網站標題',
             'modal_body'=>[
                 [

@@ -39,7 +39,7 @@ Route::prefix('/admin')->group(function(){
 
 //modals
 Route::get("/modals/addTitle", [TitleController::class,'create']);
-Route::view("/modals/addAd",'modals.base_modal',['modal_header'=>'新增動態文字廣告']);
+Route::get("/modals/addAd", [AdController::class,'create']);
 Route::view("/modals/addImage",'modals.base_modal',['modal_header'=>'新增校園映像圖片']);
 
 // 預設

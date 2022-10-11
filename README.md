@@ -10,6 +10,10 @@
 - 2022/10/10
 - 在Controller 導入Model，取得資料表資料，使用dd()偵錯
 - 修改前端版面，顯示資料表資料
+- 發現軟刪除用法錯誤，刪除資料表，至migration 設定軟刪除資料表型態
+- 至Model 導入軟刪除softDeletes
+- 使用tinker 塞假資料，測試軟刪除，softDeletes_at 會記錄刪除時間
+- 
 - 
 - 2022/10/9
 - 使用Controllers 完成之前在路由的進階用法，連結同版面
@@ -34,8 +38,7 @@
 - 以下照打，目的是刪除資料表內容
 - Title::find(1)
 - $title=Title::find(1)
-- $title->delete() ,如果回傳true 表示刪除成功(不建議使用)
-- $title->softdelete() ,如果回傳true 表示軟刪除成功
+- $title->delete() ,如果回傳true 表示刪除成功(因為有softDeletes，不會真的刪除)
 - $all=Title::all()
 - Title::count()
 - 輸入quit 離開Shell 狀態

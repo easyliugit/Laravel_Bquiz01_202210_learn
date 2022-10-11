@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('text',64)->nullable();
             $table->string('img',100)->nullable();
             $table->boolean('sh')->default(0);
-            $table->softDeletes($column = 'deleted_at', $precision = 0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

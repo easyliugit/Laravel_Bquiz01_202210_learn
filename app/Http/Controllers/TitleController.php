@@ -165,10 +165,16 @@ class TitleController extends Controller
 
         if ($title->sh==1) {
             $title->sh=0;
+            $findDef=Title::where('sh',0)->first();
+            $findDef->sh=1;
+            $findDef->save();
         } else {
             $title->sh=1;
+            $findShow=Title::where('sh',1)->first();
+            $findShow->sh=0;
+            $findShow->save();
         }
-        
+
         $title->save();
         
     }

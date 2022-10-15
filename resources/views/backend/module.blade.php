@@ -32,7 +32,7 @@
                             隱藏
                         @endif
                     </button></td>
-                    <td><button class="btn btn-danger btn-sm" data-id="{{$row->id}}">刪除</button></td>
+                    <td><button class="btn btn-danger btn-sm delete" data-id="{{$row->id}}">刪除</button></td>
                     <td><button class="btn btn-info btn-sm edit" data-id="{{$row->id}}">編輯</button></td>
                 </tr>
                 @endforeach
@@ -71,6 +71,17 @@
                 })
             },
         );
+    });
+
+    $('.delete').on('click', function () {
+        let id=$(this).data('id');
+        $.ajax({
+            type: "delete",
+            url: `/admin/title/${id}`,
+            success: function (response) {
+                location.reload()
+            }
+        });
     });
 </script>
 @endsection

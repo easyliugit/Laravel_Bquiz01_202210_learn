@@ -157,6 +157,23 @@ class TitleController extends Controller
     }
 
     /**
+     * 改變資料的顯示狀態
+     */
+    public function display($id)
+    {
+        $title=Title::find($id);
+
+        if ($title->sh==1) {
+            $title->sh=0;
+        } else {
+            $title->sh=1;
+        }
+        
+        $title->save();
+        
+    }
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id

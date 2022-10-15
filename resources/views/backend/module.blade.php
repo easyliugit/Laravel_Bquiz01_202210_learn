@@ -25,7 +25,7 @@
                     <tr>
                     <td><img src="{{ asset('storage/'.$row->img) }}" alt="" style="width:300px;height:30px;"></td>
                     <td>{{$row->text}}</td>
-                    <td><button class="btn btn-success btn-sm" data-id="{{$row->id}}">
+                    <td><button class="btn btn-success btn-sm show" data-id="{{$row->id}}">
                         @if ($row->sh==1)
                             顯示
                         @else
@@ -49,7 +49,7 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-    
+
     $('#addRow').on('click', function () {
         $.get("/modals/add{{ $module }}", function (modal) {
             $("#modal").html(modal)
@@ -84,7 +84,18 @@
         $.ajax({
             type: "delete",
             url: `/admin/title/${id}`,
-            success: function (response) {
+            success: function () {
+                location.reload()
+            }
+        });
+    });
+
+    $('.show').on('click', function () {
+        let id=$(this).data('id');
+        $.ajax({
+            type: "patch",
+            url: `/admin/title/sh/${id}`,
+            success: function () {
                 location.reload()
             }
         });

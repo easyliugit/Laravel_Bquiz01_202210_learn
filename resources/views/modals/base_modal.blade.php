@@ -28,6 +28,9 @@ Launch demo modal
                                 @case('textarea')
                                     
                                     @break
+                                @case('img')                                    
+                                    @include('layouts.img',$row)
+                                    @break
                                 @default
                                     
                             @endswitch

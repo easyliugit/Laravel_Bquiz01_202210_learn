@@ -94,6 +94,34 @@ class TitleController extends Controller
     public function edit($id)
     {
         //
+        $title=Title::find($id);
+        $view=[
+            'action'=>'/admin/title'.$id,
+            'modal_header'=>'編輯網站標題資料',
+            'modal_body'=>[
+                [
+                    'label'=>'目前標題圖片',
+                    'tag'=>'img',
+                    'src'=>$title->img,
+                    'style'=>'width:300px;height:30px'
+                ],
+                [
+                    'label'=>'更換標題圖片',
+                    'tag'=>'input',
+                    'type'=>'file',
+                    'name'=>'img'
+                ],
+                [
+                    'label'=>'標題區替代文字',
+                    'tag'=>'input',
+                    'type'=>'text',
+                    'name'=>'text',
+                    'value'=>$title->text,
+                ],
+            ],
+        ];
+
+        return view('modals.base_modal',$view);
     }
 
     /**

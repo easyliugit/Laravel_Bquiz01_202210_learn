@@ -7,12 +7,17 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+## 2022/10/14~15
+- 完善原本題型一的功能
+- 設置編輯檔案功能互動視窗內容
+- 
 ## 2022/10/11
 - 介紹Laravel 儲存檔案機制
 - storage:link 建立共用連結
 - public/storage <-> storage/app/public
 - 完成檔案上傳，新增資料功能
-- 修改檔案路徑img->storage
+- 修改檔案路徑img 至共用檔案路徑storage
+- Model 是Laravel ORM 最核心的部分
 - 
 ## 2022/10/10
 - 在Controller 導入Model，取得資料表資料，使用dd()偵錯
@@ -26,7 +31,7 @@
 - 互動視窗加入表單用post方式，修改按鈕
 - 路由加入post導向控制器中的新增函式
 - 送出表單發生錯誤代碼419 (CSRF,跨網域錯誤)
-- 表單內加入@csrf，已符合Laravel psot 安全機制
+- 表單內加入@csrf，已符合Laravel post 安全機制
 - 
 ## 2022/10/9
 - 使用Controllers 完成之前在路由的進階用法，連結同版面

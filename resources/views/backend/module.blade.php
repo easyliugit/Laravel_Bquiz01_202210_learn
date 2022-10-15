@@ -33,7 +33,7 @@
                         @endif
                     </button></td>
                     <td><button class="btn btn-danger btn-sm" data-id="{{$row->id}}">刪除</button></td>
-                    <td><button class="btn btn-info btn-sm" data-id="{{$row->id}}">編輯</button></td>
+                    <td><button class="btn btn-info btn-sm edit" data-id="{{$row->id}}">編輯</button></td>
                 </tr>
                 @endforeach
                 @endisset
@@ -56,5 +56,21 @@
             })
         })
     })
+
+    $('.edit').on('click', function () {
+        let id=$(this).data('id');
+        $.get(`/modals/title/${id}`,
+            function (modal) {
+                $("#modal").html(modal)
+                const myModal = new bootstrap.Modal('#baseleModal')
+                myModal.show()
+                // 隱藏時 清除資源 刪除內容
+                $('#baseleModal').on('hidden.bs.modal',function(){
+                    myModal.dispose()
+                    $("#modal").html("")
+                })
+            },
+        );
+    });
 </script>
 @endsection

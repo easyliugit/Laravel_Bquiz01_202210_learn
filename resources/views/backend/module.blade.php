@@ -44,6 +44,12 @@
 
 @section('script')
 <script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    
     $('#addRow').on('click', function () {
         $.get("/modals/add{{ $module }}", function (modal) {
             $("#modal").html(modal)

@@ -8,6 +8,9 @@ Launch demo modal
 <div class="modal-dialog modal-dialog-centered modal-xl">
     <form action="{{$action}}" method="post" enctype="multipart/form-data" class="w-100">
     @csrf
+    @isset($method)
+        @method($method)
+    @endisset
         <div class="modal-content">
         <div class="modal-header">
             {{-- 網站標題 --}}

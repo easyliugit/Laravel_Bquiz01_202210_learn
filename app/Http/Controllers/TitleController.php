@@ -96,7 +96,8 @@ class TitleController extends Controller
         //
         $title=Title::find($id);
         $view=[
-            'action'=>'/admin/title'.$id,
+            'action'=>'/admin/title/'.$id,
+            'method'=>'patch',
             'modal_header'=>'編輯網站標題資料',
             'modal_body'=>[
                 [
@@ -134,6 +135,7 @@ class TitleController extends Controller
     public function update(Request $request, $id)
     {
         //
+        return '更新資料';
     }
 
     /**

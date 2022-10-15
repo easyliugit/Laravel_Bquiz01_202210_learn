@@ -44,6 +44,9 @@ Route::prefix('/admin')->group(function(){
     Route::post('/news', [NewsController::class,'store']);
     Route::post('/admin', [AdminController::class,'store']);
     Route::post('/menu', [MenuController::class,'store']);
+
+    // update
+    Route::patch('/title/{id}',[TitleController::class,'update']);
 });
 
 // modals

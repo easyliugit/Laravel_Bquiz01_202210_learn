@@ -47,6 +47,9 @@ Route::prefix('/admin')->group(function(){
 
     // update
     Route::patch('/title/{id}',[TitleController::class,'update']);
+
+    // delete
+    Route::delete('/title/{id}',[TitleController::class,'destroy']);
 });
 
 // modals

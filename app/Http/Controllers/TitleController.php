@@ -165,5 +165,6 @@ class TitleController extends Controller
     public function destroy($id)
     {
         //
+        Title::destroy($id);
     }
 }

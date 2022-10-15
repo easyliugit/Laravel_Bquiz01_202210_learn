@@ -135,7 +135,25 @@ class TitleController extends Controller
     public function update(Request $request, $id)
     {
         //
-        return '更新資料';
+        $title=Title::find($id);
+
+        // 儲存檔案
+        if ($request->hasFile('img') && $request->file('img')->isValid()) {
+            // 原始檔案名稱
+            $filename = $request->file('img')->getClientOriginalName();
+            // 儲存至 public 目錄，命名檔案為原始名稱
+            $request->file('img')->storeAs('public', $filename);
+            $title->img=$filename;
+        }
+
+        // 現在的資料已經會自動判斷這個動作
+        if ($title->text!=$request->input('text')) {
+            $title->text=$request->input('text');
+        }
+        
+        $title->save();
+
+        return redirect('/admin/title');
     }
 
     /**

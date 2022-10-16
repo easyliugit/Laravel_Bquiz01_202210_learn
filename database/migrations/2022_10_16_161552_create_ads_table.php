@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('ads', function (Blueprint $table) {
             $table->id();
             $table->string('text');
-            $table->boolean('sh');
+            $table->boolean('sh')->default(1);
             $table->timestamps();
         });
     }

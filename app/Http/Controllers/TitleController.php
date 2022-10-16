@@ -23,7 +23,7 @@ class TitleController extends Controller
             $tmp=[
                 [
                     'tag'=>'img',
-                    'src'=>asset('storage/'.$a->img),
+                    'src'=>$a->img,
                     'style'=>'width:300px;height:30px;',
                 ],
                 [
@@ -65,7 +65,7 @@ class TitleController extends Controller
             'header'=>'網站標題管理',
             'module'=>'Title',
             'cols'=>$col,
-            'rows'=>$all
+            'rows'=>$rows
         ];
         return view('backend.module',$view);
     }

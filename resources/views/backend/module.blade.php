@@ -23,17 +23,20 @@
                 @isset($rows)
                 @foreach ($rows as $row)
                 <tr>
-                    <td><img src="{{ asset('storage/'.$row->img) }}" alt="" style="width:300px;height:30px;"></td>
-                    <td>{{$row->text}}</td>
-                    <td><button class="btn btn-success btn-sm show" data-id="{{$row->id}}">
-                        @if ($row->sh==1)
-                            顯示
-                        @else
-                            隱藏
-                        @endif
-                    </button></td>
-                    <td><button class="btn btn-danger btn-sm delete" data-id="{{$row->id}}">刪除</button></td>
-                    <td><button class="btn btn-info btn-sm edit" data-id="{{$row->id}}">編輯</button></td>
+                    @foreach ($row as $item)
+                    <td>
+                        @switch($item['tag'])
+                            @case('img')
+                                @include('layouts.img',$item)
+                                @break
+                            @case('button')
+                                @include('layouts.button',$item)
+                                @break
+                            @default
+                                {{ $item['text'] }}
+                        @endswitch
+                    </td>
+                    @endforeach
                 </tr>
                 @endforeach
                 @endisset

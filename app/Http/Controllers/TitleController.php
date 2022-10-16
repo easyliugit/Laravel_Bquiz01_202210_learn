@@ -17,7 +17,7 @@ class TitleController extends Controller
         $all = Title::all();
         // dd($all);
         $col=['網站標題','替代文字','顯示','刪除','操作'];
-        $row=[];
+        $rows=[];
 
         foreach ($all as $a) {
             $tmp=[

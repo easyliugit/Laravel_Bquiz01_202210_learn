@@ -7,6 +7,9 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+## 2022/10/16
+- 前端進階使用技巧，CMS布局
+- 
 ## 2022/10/15
 - 設置編輯檔案功能互動視窗內容
 - 使用假方法patch方式傳遞編輯動作(使用post也可以，而且單純)

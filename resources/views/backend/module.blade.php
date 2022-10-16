@@ -14,15 +14,15 @@
             </h5>
             <table class="table border-none text-center">
                 <tr>
-                    <td>網站標題</td>
-                    <td>替代文字</td>
-                    <td width="10%">顯示</td>
-                    <td width="10%">刪除</td>
-                    <td width="10%">操作</td>
+                @isset($cols)
+                @foreach ($cols as $col)
+                    <td>{{ $col }}</td>
+                @endforeach
+                @endisset
                 </tr>
                 @isset($rows)
                 @foreach ($rows as $row)
-                    <tr>
+                <tr>
                     <td><img src="{{ asset('storage/'.$row->img) }}" alt="" style="width:300px;height:30px;"></td>
                     <td>{{$row->text}}</td>
                     <td><button class="btn btn-success btn-sm show" data-id="{{$row->id}}">

@@ -12,6 +12,10 @@
 - 開始套用CMS布局
 - 建立Ad 資料表型態，php artisan make:model Ad -m
 - 建立資料表，php artisan migrate
+- 修改Ad 資料表型態，回上一步驟php artisan migrate:rollback
+- 編輯Ad 控制器，路由連結
+- 開關切換，使用餘數
+- 完成Ad 新增功能
 - 
 ## 2022/10/15
 - 設置編輯檔案功能互動視窗內容

@@ -47,21 +47,24 @@ Route::prefix('/admin')->group(function(){
 
     // update
     Route::patch('/title/{id}',[TitleController::class,'update']);
+    Route::patch('/ad/{id}',[TitleController::class,'update']);
 
     // delete
     Route::delete('/title/{id}',[TitleController::class,'destroy']);
+    Route::delete('/ad/{id}',[TitleController::class,'destroy']);
 
     // show
     Route::patch('/title/sh/{id}',[TitleController::class,'display']);
+    Route::patch('/ad/sh/{id}',[TitleController::class,'display']);
 });
 
 // modals
 Route::get("/modals/addTitle", [TitleController::class,'create']);
 Route::get("/modals/addAd", [AdController::class,'create']);
-Route::view("/modals/addImage",'modals.base_modal',['modal_header'=>'新增校園映像圖片']);
 
 // edit
 Route::get('/modals/title/{id}',[TitleController::class,'edit']);
+Route::get('/modals/ad/{id}',[TitleController::class,'edit']);
 
 // 預設
 // Route::get('/', function () {

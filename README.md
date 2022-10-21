@@ -9,8 +9,8 @@
 # 學習紀錄
 ## 2022/10/21
 - 新增Seeder 內容
-- 執行DatabaseSeeder php artisan db:seeder
-- 執行個別種子 php artisan db:seed --class=UserSeeder
+- 執行DatabaseSeeder建立預設資料 php artisan db:seed
+- 執行個別UserSeeder建立預設資料 php artisan db:seed --class=UserSeeder
 - 實務中很少個別執行，將所有個別種子寫入DatabaseSeeder 一起執行
 - 
 ## 2022/10/17

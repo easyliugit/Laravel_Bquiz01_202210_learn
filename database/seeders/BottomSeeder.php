@@ -16,6 +16,6 @@ class BottomSeeder extends Seeder
     public function run()
     {
         //
-        Bottom::create(['bottom'=>'科技大學版權所有']);
+        Bottom::create(['text'=>'科技大學版權所有']);
     }
 }

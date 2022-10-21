@@ -14,7 +14,7 @@ class TotalController extends Controller
         $col=['進站總人數'];
         $rows=[
             [
-                'text'=>$total->text,
+                'text'=>$total->total,
             ],
             [
                 'tag'=>'button',
@@ -35,5 +35,42 @@ class TotalController extends Controller
             'rows'=>$rows
         ];
         return view('backend.module',$view);
+    }
+
+    public function edit($id)
+    {
+        //
+        $total=Total::first();
+        $view=[
+            'action'=>'/admin/total/'.$id,
+            'method'=>'patch',
+            'modal_header'=>'編輯進站總人數',
+            'modal_body'=>[
+                [
+                    'label'=>'進站總人數',
+                    'tag'=>'input',
+                    'type'=>'number',
+                    'name'=>'total',
+                    'value'=>$total->total,
+                ],
+            ],
+        ];
+
+        return view('modals.base_modal',$view);
+    }
+
+    public function update(Request $request, $id)
+    {
+        //
+        $total=Total::find($id);
+
+        // 現在的資料已經會自動判斷這個動作
+        if ($total->total!=$request->input('total')) {
+            $total->total=$request->input('total');
+            $total->save();
+        }
+        
+
+        return redirect('/admin/total');
     }
 }

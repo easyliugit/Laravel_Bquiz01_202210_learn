@@ -7,6 +7,18 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+## 2022/10/21
+- 新增Seeder 內容
+- 執行DatabaseSeeder php artisan db:seeder
+- 執行個別種子 php artisan db:seed --class=UserSeeder
+- 實務中很少個別執行，將所有個別種子寫入DatabaseSeeder 一起執行
+- 
+## 2022/10/17
+- 說明工廠類factories 大量生產資料，種子類seeders 起始就有資料
+- 修改題型一製作Total、Bottom 的方式，改為seeder
+- 此例子為小兒科
+- 建立php artisan make:seeder UserSeeder
+- 
 ## 2022/10/16
 - 前端進階使用技巧，CMS 布局
 - 開始套用CMS 布局

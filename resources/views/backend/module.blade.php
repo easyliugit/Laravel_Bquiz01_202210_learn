@@ -46,9 +46,9 @@
                     @endforeach
                 @else
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ $cols[0] }}</td>
+                        <td>{{ $rows[0]['text'] }}</td>
+                        <td>@include('layouts.button',$rows[1])</td>
                     </tr>
                 @endif
                 @endisset

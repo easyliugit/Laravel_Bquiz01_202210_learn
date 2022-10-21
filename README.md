@@ -12,6 +12,8 @@
 - 執行DatabaseSeeder建立預設資料 php artisan db:seed
 - 執行個別UserSeeder建立預設資料 php artisan db:seed --class=UserSeeder
 - 實務中很少個別執行，將所有個別種子寫入DatabaseSeeder 一起執行
+- 工廠類factories 常使用測試資料
+- 新增按鈕依據module 決定是否顯示
 - 
 ## 2022/10/17
 - 說明工廠類factories 大量生產資料，種子類seeders 起始就有資料

@@ -9,7 +9,9 @@
         <button class="col-4 btn btn-light border py-2 text-center">管理登出</button>
         <div class="border w-100 p-1" style="height: 500px">
             <h5 class="text-center border-bottom py-3">
+                @if ($module != 'Total' && $module != 'Bottom')
                 <button id="addRow" class="btn btn-primary btn-sm float-start">新增</button>
+                @endif
                 {{ $header }}
             </h5>
             <table class="table border-none text-center">

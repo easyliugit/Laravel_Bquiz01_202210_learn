@@ -17,30 +17,40 @@
             <table class="table border-none text-center">
                 <tr>
                 @isset($cols)
-                @foreach ($cols as $col)
-                    <td>{{ $col }}</td>
-                @endforeach
+                @if ($module != 'Total' && $module != 'Bottom')
+                    @foreach ($cols as $col)
+                        <td>{{ $col }}</td>
+                    @endforeach
+                @endif
                 @endisset
                 </tr>
                 @isset($rows)
-                @foreach ($rows as $row)
-                <tr>
-                    @foreach ($row as $item)
-                    <td>
-                        @switch($item['tag'])
-                            @case('img')
-                                @include('layouts.img',$item)
-                                @break
-                            @case('button')
-                                @include('layouts.button',$item)
-                                @break
-                            @default
-                                {{ $item['text'] }}
-                        @endswitch
-                    </td>
+                @if ($module != 'Total' && $module != 'Bottom')
+                    @foreach ($rows as $row)
+                    <tr>
+                        @foreach ($row as $item)
+                        <td>
+                            @switch($item['tag'])
+                                @case('img')
+                                    @include('layouts.img',$item)
+                                    @break
+                                @case('button')
+                                    @include('layouts.button',$item)
+                                    @break
+                                @default
+                                    {{ $item['text'] }}
+                            @endswitch
+                        </td>
+                        @endforeach
+                    </tr>
                     @endforeach
-                </tr>
-                @endforeach
+                @else
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                @endif
                 @endisset
             </table>
         </div>

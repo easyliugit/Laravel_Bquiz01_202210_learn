@@ -18,6 +18,14 @@
 - 完成進站人數、版權管理控制器設置
 - 整理路由布局
 - 完成進站總人數、版權管理功能
+- 建立校園映像圖片模型 php artisan make:model Image -m
+- 其餘模型也一次建立
+- php artisan make:model Mvim -m
+- php artisan make:model News -m
+- php artisan make:model Admin -m
+- php artisan make:model Menu -m
+- php artisan make:model SubMenu -m
+- 
 - 
 ## 2022/10/17
 - 說明工廠類factories 大量生產資料，種子類seeders 起始就有資料

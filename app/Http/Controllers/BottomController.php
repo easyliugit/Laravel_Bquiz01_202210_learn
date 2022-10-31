@@ -44,10 +44,10 @@ class BottomController extends Controller
         $view=[
             'action'=>'/admin/bottom/'.$id,
             'method'=>'patch',
-            'modal_header'=>'頁尾版權管理',
+            'modal_header'=>'編輯頁尾版權文字',
             'modal_body'=>[
                 [
-                    'label'=>'頁尾版權',
+                    'label'=>'頁尾版權文字',
                     'tag'=>'input',
                     'type'=>'text',
                     'name'=>'bottom',

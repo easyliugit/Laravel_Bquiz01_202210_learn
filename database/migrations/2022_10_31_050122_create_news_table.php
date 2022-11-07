@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
+            $table->text('text',64);
+            $table->boolean('sh')->default(1);
             $table->timestamps();
         });
     }

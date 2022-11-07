@@ -7,6 +7,19 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+## 2022/11/7
+- 建立資料表 php artisan migrate
+- 
+## 2022/10/31
+- 建立校園映像圖片模型 php artisan make:model Image -m
+- 其餘模型也一次建立
+- php artisan make:model Mvim -m
+- php artisan make:model News -m
+- php artisan make:model Admin -m
+- php artisan make:model Menu -m
+- php artisan make:model SubMenu -m
+- 建立資料表型態
+- 
 ## 2022/10/21
 - 新增Seeder 內容
 - 執行DatabaseSeeder建立預設資料 php artisan db:seed
@@ -18,14 +31,6 @@
 - 完成進站人數、版權管理控制器設置
 - 整理路由布局
 - 完成進站總人數、版權管理功能
-- 建立校園映像圖片模型 php artisan make:model Image -m
-- 其餘模型也一次建立
-- php artisan make:model Mvim -m
-- php artisan make:model News -m
-- php artisan make:model Admin -m
-- php artisan make:model Menu -m
-- php artisan make:model SubMenu -m
-- 
 - 
 ## 2022/10/17
 - 說明工廠類factories 大量生產資料，種子類seeders 起始就有資料

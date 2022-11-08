@@ -9,7 +9,7 @@ class ImageController extends Controller
 {
     public function index()
     {
-        $image = Image::image();
+        $image = Image::all();
         // dd($image);
         $col=['校園映像圖片','顯示','刪除','操作'];
         $rows=[];

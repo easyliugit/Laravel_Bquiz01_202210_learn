@@ -53,7 +53,7 @@ class ImageController extends Controller
         // dd($rows);
 
         $view=[
-            'header'=>'網站標題管理',
+            'header'=>'校園映像圖片管理',
             'module'=>'Image',
             'cols'=>$col,
             'rows'=>$rows
@@ -70,7 +70,7 @@ class ImageController extends Controller
     {
         //
         $view=[
-            'action'=>'/admin/title',
+            'action'=>'/admin/image',
             'modal_header'=>'新增校園映像圖片',
             'modal_body'=>[
                 [

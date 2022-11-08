@@ -7,6 +7,10 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+## 2022/11/8
+- 在Model 指定可變更的欄位protected $fillable，當遇到同一筆資料多欄位變更需要用到。
+- 
+- 
 ## 2022/11/7
 - 建立資料表 php artisan migrate
 - 

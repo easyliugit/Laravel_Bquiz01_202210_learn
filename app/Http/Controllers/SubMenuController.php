@@ -3,26 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Admin;
+use App\Models\SubMenu;
 
-class AdminController extends Controller
+class SubMenuController extends Controller
 {
-    public function index()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index($menu_id)
     {
 
-        $all=Admin::all();
-        $cols=['帳號','密碼','刪除','操作'];
+        $all=SubMenu::where("menu_id",$menu_id)->get();
+        $cols=['次選單名稱','次選單連結網址','刪除','操作',''];
         $rows=[];
 
         foreach($all as $a){
             $tmp=[
               [
                   'tag'=>'',
-                  'text'=>$a->acc
+                  'text'=>$a->text
               ],
               [
                   'tag'=>'',
-                  'text'=>str_repeat("*",strlen($a->pw))
+                  'text'=>$a->href
               ],
               [
                 'tag'=>'button',
@@ -39,7 +44,7 @@ class AdminController extends Controller
                 'action'=>'edit',
                 'id'=>$a->id,
                 'text'=>'編輯',
-              ] 
+              ]
             ];
 
             $rows[]=$tmp;
@@ -47,37 +52,37 @@ class AdminController extends Controller
 
         //dd($rows);
 
-
-        $this->view['header']='管理者管理';
-        $this->view['module']='Admin';
+        
+        $this->view['header']='次選單管理';
+        $this->view['module']='SubMenu';
         $this->view['cols']=$cols;
         $this->view['rows']=$rows;
+        $this->view['menu_id']=$menu_id;
         return view('backend.module',$this->view);
-     
     }
 
-    public function create(){
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create($menu_id)
+    {
         $view=[
-            'action'=>'/admin/admin',
-            'modal_header'=>"新增管理者",
+            'action'=>'/admin/submenu/'.$menu_id,
+            'modal_header'=>"新增次選單",
             'modal_body'=>[
                 [
-                    'label'=>'帳號：',
+                    'label'=>'次選單名稱',
                     'tag'=>'input',
                     'type'=>'text',
-                    'name'=>'acc',
+                    'name'=>'text',
                 ],
                 [
-                    'label'=>'密碼：',
+                    'label'=>'次選單連結網址',
                     'tag'=>'input',
-                    'type'=>'password',
-                    'name'=>'pw',
-                ],
-                [
-                    'label'=>'確認密碼：',
-                    'tag'=>'input',
-                    'type'=>'password',
-                    'name'=>'pw2',
+                    'type'=>'text',
+                    'name'=>'href',
                 ],
             ],
         ];
@@ -85,15 +90,22 @@ class AdminController extends Controller
 
         return view("modals.base_modal",$view);
     }
-    public function store(Request $request)
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request,$menu_id)
     {
-        //
-            $admin=new Admin;
-            $admin->acc=$request->input('acc');
-            $admin->pw=$request->input('pw');
-            $admin->save();
-      
-        return redirect('/admin/admin');
+        $sub=new SubMenu;
+        $sub->text=$request->input('text');
+        $sub->href=$request->input('href');
+        $sub->menu_id=$menu_id;
+        $sub->save();
+  
+        return redirect('/admin/submenu/'.$menu_id);
     }
 
     /**
@@ -115,24 +127,25 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
-        $admin=Admin::find($id);
+        $sub=SubMenu::find($id);
         $view=[
-            'action'=>'/admin/admin/'.$id,
+            'action'=>'/admin/submenu/'.$id,
             'method'=>'PATCH',
-            'modal_header'=>"修改管理者密碼",
+            'modal_header'=>"編輯次選單內容",
             'modal_body'=>[
                 [
-                    'label'=>'帳號：',
-                    'tag'=>'',
-                    'text'=>$admin->acc
+                    'label'=>'次選單名稱',
+                    'tag'=>'input',
+                    'type'=>'text',
+                    'name'=>'text',
+                    'value'=>$sub->text
                 ],
                 [
-                    'label'=>'密碼：',
+                    'label'=>'次選單連結網址',
                     'tag'=>'input',
-                    'type'=>'password',
-                    'name'=>'pw',
-                    'value'=>$admin->pw
+                    'type'=>'text',
+                    'name'=>'href',
+                    'value'=>$sub->href
                 ],
             ],
         ];
@@ -151,19 +164,20 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
 
-        $admin=Admin::find($id);
+        $sub=SubMenu::find($id);
 
         
-        if($admin->pw!=$request->input('pw')){
-            $admin->pw=$request->input('pw');
-            $admin->save();
+        if($sub->text!=$request->input('text')){
+            $sub->text=$request->input('text');
+        }
+        if($sub->href!=$request->input('href')){
+            $sub->href=$request->input('href');
         }
         
-        return redirect('/admin/admin');
+        $sub->save();
+        return redirect('/admin/submenu/'.$sub->menu_id);
     }
-
 
     /**
      * Remove the specified resource from storage.
@@ -174,6 +188,6 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
-        Admin::destroy($id);
+        SubMenu::destroy($id);
     }
 }

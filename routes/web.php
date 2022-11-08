@@ -72,10 +72,10 @@ Route::prefix('/admin')->group(function(){
     // show
     Route::patch('/title/sh/{id}',[TitleController::class,'display']);
     Route::patch('/ad/sh/{id}',[TitleController::class,'display']);
-    Route::patch('/image/{id}', [ImageController::class,'display']);
-    Route::patch('/mvim/{id}', [MvimController::class,'display']);
-    Route::patch('/news/{id}', [NewsController::class,'display']);
-    Route::patch('/menu/{id}', [MenuController::class,'display']);
+    Route::patch('/image/sh/{id}', [ImageController::class,'display']);
+    Route::patch('/mvim/sh/{id}', [MvimController::class,'display']);
+    Route::patch('/news/sh/{id}', [NewsController::class,'display']);
+    Route::patch('/menu/sh/{id}', [MenuController::class,'display']);
 });
 
 // modals

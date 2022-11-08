@@ -185,7 +185,7 @@ class ImageController extends Controller
     public function display($id)
     {
         $image=Image::find($id);
-        $image->sh=($image->sh)%2;
+        $image->sh=($image->sh+1)%2;
         $image->save();
         
     }

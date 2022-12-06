@@ -69,16 +69,29 @@
     });
 
     $('#addRow').on('click', function () {
-        $.get("/modals/add{{ $module }}", function (modal) {
-            $("#modal").html(modal)
-            const myModal = new bootstrap.Modal('#baseleModal')
-            myModal.show()
-            // 隱藏時 清除資源 刪除內容
-            $('#baseleModal').on('hidden.bs.modal',function(){
-                myModal.dispose()
-                $("#modal").html("")
+        @isset($menu_id)
+            $.get("/modals/add{{ $module }}/{{ $menu_id }}", function (modal) {
+                $("#modal").html(modal)
+                const myModal = new bootstrap.Modal('#baseleModal')
+                myModal.show()
+                // 隱藏時 清除資源 刪除內容
+                $('#baseleModal').on('hidden.bs.modal',function(){
+                    myModal.dispose()
+                    $("#modal").html("")
+                })
             })
-        })
+        @else
+            $.get("/modals/add{{ $module }}", function (modal) {
+                $("#modal").html(modal)
+                const myModal = new bootstrap.Modal('#baseleModal')
+                myModal.show()
+                // 隱藏時 清除資源 刪除內容
+                $('#baseleModal').on('hidden.bs.modal',function(){
+                    myModal.dispose()
+                    $("#modal").html("")
+                })
+            })
+        @endif
     })
 
     $('.edit').on('click', function () {
@@ -99,11 +112,12 @@
 
     $('.delete').on('click', function () {
         let id=$(this).data('id');
+        let _this=$(this);
         $.ajax({
             type: "delete",
             url: `/admin/{{ strtolower($module) }}/${id}`,
             success: function () {
-                location.reload()
+                _this.parents('tr').remove();
             }
         });
     });

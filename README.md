@@ -7,6 +7,11 @@
 - [Bootstrap CDN](https://getbootstrap.com/docs/5.2/getting-started/introduction/#cdn-links)
 
 # 學習紀錄
+## 2022/12/6
+- 補完自動顯示欄位模組
+- 動畫圖片管理，刪除功能改成AJAX動態移除HTML，非重新整理畫面
+## 2022/11/15
+- 補充動畫圖片管理前端模板
 ## 2022/11/8
 - 在Model 指定可變更的欄位protected $fillable，當遇到同一筆資料多欄位變更需要用到。
 - 
